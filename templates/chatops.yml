@@ -1,1 +1,10 @@
-
+# gitlab-ci 聊天室客製化指令
+檢查GPU狀態:
+  stage: chatops
+  only: [chat]
+  tags:
+    - shell
+    - nvidia-docker
+    - skynet
+  script:
+    - nvidia-smi
