@@ -8,3 +8,13 @@
     - skynet
   script:
     - nvidia-smi
+
+取得服務清單:
+  stage: chatops
+  only: [chat]
+  tags:
+    - shell
+    - nvidia-docker
+    - skynet
+  script:
+    - docker-compose ps
